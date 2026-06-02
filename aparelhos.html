@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparelhos Ortodônticos | Dra. Emilly Ebersol</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'] 
+                    },
+                    colors: {
+                        brand: {
+                            50: '#faf7f2',  // Champagne/Bege muito suave
+                            100: '#eee3d1', // Nude claro
+                            500: '#c2a373', // Dourado/Nude elegante (Cor Principal)
+                            600: '#a38454', // Dourado escuro
+                            900: '#473924', // Marrom escuro
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .btn-apple {
+            background-color: #1d1d1f; color: white; border-radius: 980px; padding: 12px 24px; font-weight: 500; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center;
+        }
+        .btn-apple:hover { background-color: #424245; transform: scale(1.05); }
+    </style>
+</head>
+<body class="text-gray-800 font-sans bg-white selection:bg-brand-100 selection:text-brand-900">
+
+    <header class="fixed w-full top-0 z-50 glass-header transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/30 transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-arrow-left text-lg"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Voltar ao <span class="text-brand-600 font-normal">Início</span></span>
+                </a>
+
+                <div class="hidden md:block">
+                    <button onclick="agendarWhatsApp('Aparelhos Ortodônticos')" class="btn-apple text-sm">
+                        Agendar Avaliação
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-brand-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-100 rounded-full blur-3xl opacity-60 -mr-20 -mt-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-6 shadow-sm border border-blue-200">
+                        <i class="fa-solid fa-teeth"></i> Ortodontia Corretiva
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+                        Tradição e tecnologia para o <span class="text-brand-600">sorriso perfeito.</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600 mb-8 font-light leading-relaxed">
+                        Conquiste dentes alinhados, melhore a sua mastigação e eleve a sua autoestima. Trabalhamos com as melhores técnicas de aparelhos fixos, móveis e estéticos para transformar o seu sorriso em qualquer fase da vida.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="agendarWhatsApp('Aparelho Ortodôntico')" class="btn-apple text-base px-8 py-4 shadow-lg shadow-gray-900/20 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Agendar avaliação
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative mt-8 lg:mt-0">
+                    <div class="absolute inset-0 bg-brand-500 rounded-[2.5rem] transform translate-x-4 translate-y-4 opacity-20"></div>
+                    <img src="imagens/Ortodontia.jpeg" alt="Jovem sorrindo com aparelho ortodôntico" class="rounded-[2.5rem] shadow-2xl object-cover w-full h-[400px] lg:h-[500px] relative z-10">
+                    
+                    <div class="absolute -bottom-6 -left-6 lg:-left-12 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100 z-20 animate-float">
+                        <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-500">
+                            <i class="fa-solid fa-circle-check text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Resultado</p>
+                            <p class="font-bold text-gray-900 text-sm">Estética e Função</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <img src="imagens/Ortodontia 1.jpeg" alt="Sorriso saudável alinhado" class="rounded-3xl shadow-lg w-full h-[400px] object-cover">
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Qual é a melhor opção para você?</h2>
+                    <p class="text-gray-600 mb-6 font-light">
+                        A ortodontia vai muito além da estética. Alinhar os dentes corrige problemas na mordida, previne dores na articulação (ATM), melhora a respiração e facilita a higienização diária, evitando cáries e problemas na gengiva.
+                    </p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 mt-8">Aparelho Estético Cerâmico</h3>
+                    <p class="text-gray-600 mb-6 font-light">
+                        Se você quer alinhar o sorriso com discrição, mas prefere o sistema convencional, os aparelhos estéticos são excelentes escolhas. Os braquetes imitam a coloração dos dentes naturais, tornando o tratamento muito sutil.
+                    </p>
+
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 mt-8">
+                        <h4 class="font-semibold text-gray-900 mb-4">Principais Benefícios:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand-500 mt-1 mr-3"></i> 
+                                <span class="text-sm text-gray-700"><strong>Alinhamento Preciso:</strong> Eficiente para casos simples ou de alta complexidade.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand-500 mt-1 mr-3"></i> 
+                                <span class="text-sm text-gray-700"><strong>Opções Discretas:</strong> Peças cerâmicas que mantêm a discrição e não mancham.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand-500 mt-1 mr-3"></i> 
+                                <span class="text-sm text-gray-700"><strong>Melhora Funcional:</strong> Mastigação correta que impacta positivamente o bem-estar geral.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand-500 mt-1 mr-3"></i> 
+                                <span class="text-sm text-gray-700"><strong>Sorriso Protegido:</strong> Previne o desgaste irregular e fraturas dos dentes.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+<div class="mt-24">
+                <div class="text-center mb-10">
+                    <p class="text-gray-500 mt-2 font-light">Conheça um pouco mais sobre os aparelhos</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/ortodo4.jpeg" alt="Atendimento Infantil 1" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/ortodontia2.jpeg" alt="Atendimento Infantil 2" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>  
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/ortodontia3.jpeg" alt="Atendimento Infantil 3" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/ortodontia4.jpeg" alt="Atendimento Infantil 4" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+        </div> </section>
+
+    <footer class="bg-gray-900 py-8 text-center">
+        <p class="text-gray-400 text-sm font-light">© 2026 Dra. Emilly Ebersol. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+                header.classList.replace('bg-white/80', 'bg-white/95');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+
+        const telefoneWhatsApp = "5553999673261";
+        function agendarWhatsApp(motivo = '') {
+            let texto = `Olá! Estava no site vendo sobre *${motivo}* e gostaria de tirar dúvidas ou agendar uma avaliação.`;
+            const url = `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Dentista Emilly Ebersol | Odontologia Familiar em São José do Norte</title>
+    <meta name="description" content="Clínica odontológica da Dra. Emilly Ebersol em São José do Norte/RS. Atendimento humanizado e familiar, odontopediatria, ortodontia e alinhadores invisíveis.">
+    <meta name="keywords" content="dentista são jose do norte, dra emilly ebersol, odontopediatria são jose do norte, aparelho invisível são jose do norte, dentista familia">
+    
+    <meta property="og:title" content="Dra. Emilly Ebersol | Odontologia para Toda a Família">
+    <meta property="og:description" content="Sorrisos saudáveis para toda a sua família com atendimento humanizado em Rio Grande.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.draemillyebersol.com.br">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23c2a373' d='M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zM358.5 284.1c-13.6 20.9-38.3 33.1-64.4 33.1H218c-26.1 0-50.8-12.2-64.4-33.1-4.7-7.2-2.7-16.9 4.5-21.6 7.2-4.7 16.9-2.7 21.6 4.5 9 13.9 25.4 22.1 42.8 22.1h71.1c17.4 0 33.8-8.2 42.8-22.1 4.7-7.2 14.4-9.2 21.6-4.5 7.1 4.7 9.2 14.4 4.5 21.6z'/></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#faf7f2',  // Champagne/Bege muito suave
+                            100: '#eee3d1', // Nude claro
+                            500: '#c2a373', // Dourado/Nude elegante (Cor Principal)
+                            600: '#a38454', // Dourado escuro (Hover e destaques)
+                            900: '#473924', // Marrom acinzentado escuro para contrastes
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #fff5e9a9;
+        }
+
+        /* Classes base para a animação de scroll (Intersection Observer) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efeito de vidro para a barra de navegação superior */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Estilo dos cards de serviço na grade de tratamentos */
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Estilo base para botões principais arredondados */
+        .btn-apple {
+            background-color: #1d1d1f;
+            color: white;
+            border-radius: 980px;
+            padding: 12px 24px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-apple:hover {
+            background-color: #424245;
+            transform: scale(1.05);
+        }
+
+        /* Utilitários para esconder barras de rolagem nativas, mantendo o scroll ativo */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-gray-800 font-sans selection:bg-brand-100 selection:text-brand-900">
+
+    <header class="fixed w-full top-0 z-50 glass-header transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-tooth text-xl"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Emilly<span class="text-brand-600 font-normal">Ebersol</span></span>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Início</a>
+                    <a href="#sobre" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">A Clínica</a>
+                    <a href="#servicos" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Tratamentos</a>
+                    <a href="#avaliacoes" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Avaliações</a>
+                </nav>
+
+                <div class="hidden md:block">
+                    <button onclick="agendarWhatsApp('Consulta Geral')" class="btn-apple text-sm">
+                        Agendar Consulta
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md absolute w-full border-b border-gray-100 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col gap-4">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-brand-600 hover:bg-gray-50 rounded-md">Início</a>
+                <a href="#sobre" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-brand-600 hover:bg-gray-50 rounded-md">A Clínica</a>
+                <a href="#servicos" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-brand-600 hover:bg-gray-50 rounded-md">Procedimentos</a>
+                <a href="#avaliacoes" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-brand-600 hover:bg-gray-50 rounded-md">Avaliações</a>
+                <button onclick="agendarWhatsApp('Consulta Geral')" class="w-full text-center btn-apple mt-4">Agendar Agora</button>
+            </div>
+        </div>
+    </header>   
+
+    <section id="inicio" class="pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden relative">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-100 opacity-50 blur-3xl mix-blend-multiply animate-float"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-amber-50 opacity-50 blur-3xl mix-blend-multiply animate-float" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto animate-fade-in-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-50 text-brand-600 text-sm font-semibold mb-6 border border-brand-100">
+                    Consultório Dentista Emilly Ebersol
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight leading-tight mb-8">
+                    Sorrisos saudáveis para <br class="hidden md:block"/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-500">
+                        toda a sua família.
+                    </span>
+                </h1>
+                <p class="mt-4 text-xl text-gray-500 max-w-2xl mx-auto mb-10 font-light">
+                    Um ambiente acolhedor onde todas as gerações se sentem em casa. Do primeiro dentinho à melhor idade, cuidamos de quem você mais ama com carinho, paciência e tecnologia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="agendarWhatsApp('Consulta para a Família')" class="btn-apple text-base px-8 py-4">
+                        Agendar Consulta
+                    </button>
+                    <a href="#servicos" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-base font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm">
+                        Nossos Tratamentos
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-20 relative mx-auto w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl animate-fade-in-up" style="animation-delay: 0.3s;">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+                <img src="./imagens/Capa.jpeg"  class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 reveal">
+                    <div class="grid grid-cols-2 gap-4"> 
+                        <img src="./imagens/Consultório.jpeg" alt="Criança sorrindo no dentista" class="rounded-3xl w-full h-64 object-cover">
+                        <img src="./imagens/capa 2.jpeg" alt="Consultório em atendimento" class="rounded-3xl w-full h-64 object-cover mt-8">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">Nossa família cuidando<br/>da sua.</h2>
+                    <p class="text-lg text-gray-600 mb-6 font-light leading-relaxed">
+                        A Dra. Emilly Ebersol acredita que a visita ao dentista deve ser uma experiência leve, segura e livre de medos. Construímos um espaço preparado para receber desde bebês até os avós, unindo tecnologia moderna ao calor do atendimento humano.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <span class="font-medium">Ambiente acolhedor e humanizado, projetado para que pacientes de todas as idades se sintam em casa</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <span class="font-medium">Prevenção e acompanhamento em todas as fases da vida</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 mr-4">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <span class="font-medium">Equipe paciente, carinhosa e altamente qualificada</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Tratamentos para <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-500">todas as idades.</span></h2>
+                <p class="text-lg text-gray-600 font-light">
+                    Da prevenção infantil à reabilitação de adultos e idosos. Tudo o que sua família precisa em um só lugar.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card p-8 reveal flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-child text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Odontopediatria & Ortopedia</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Cuidado lúdico para os pequenos. Além da prevenção, utilizamos <strong>aparelhos ortopédicos</strong> para guiar o crescimento correto dos ossos da face desde cedo.
+                    </p>
+                    <a href="odontopediatria.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center relative border-2 border-brand-100 bg-gradient-to-b from-white to-brand-50/30" style="transition-delay: 100ms;">
+                    <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                        Destaque
+                    </span>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles text-2xl text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Alinhadores Invisíveis</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        A ortodontia do futuro chegou. Corrija seu sorriso de forma <strong>discreta, confortável e rápida</strong>, sem o uso de peças metálicas. Liberdade total para sorrir.
+                    </p>
+                    <a href="alinhadores.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-teeth text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Aparelhos Ortodônticos</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Soluções completas para alinhar seus dentes: trabalhamos com <strong>aparelhos fixos metálicos, estéticos (porcelana/safira) e opções móveis</strong>.
+                    </p>
+                    <a href="aparelhos.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-tooth text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Restaurações e Facetas</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Remoção de cáries de forma indolor e recuperação do dente com resinas de alta estética. Transforme o formato e a cor do seu sorriso com <strong>facetas</strong>.
+                    </p>
+                    <a href="restauracoes.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-50 to-sky-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-face-grin-stars text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Clareamento Dental</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Conquiste um sorriso iluminado e jovem com nossos protocolos de <strong>clareamento clínico e caseiro (com moldeiras)</strong>, sempre com foco em evitar sensibilidade.
+                    </p>
+                    <a href="clareamento.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-50 to-violet-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-shield-halved text-2xl text-violet-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Placa para Bruxismo</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Acorde sem dores de cabeça ou tensão na mandíbula. Nossas placas miorrelaxantes protegem seus dentes do desgaste causado pelo apertamento noturno.
+                    </p>
+                        <a href="bruxismo.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-tooth text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tratamento de Canal</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Salvamos o seu dente natural e eliminamos a dor de forma segura. Realizamos a <strong>endodontia</strong> com equipamentos modernos para o máximo de conforto.
+                    </p>
+                    <a href="canal.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-hand-sparkles text-2xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Prevenção e Limpeza</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Check-ups regulares, limpezas profiláticas e orientações de higiene para manter a boca de toda a família longe das cáries e problemas na gengiva.
+                    </p>
+                    <a href="limpeza.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-syringe text-2xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Extração Dentária e Siso</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Remoção segura de dentes com o máximo de conforto. Contamos com um <strong>anestesiador indolor</strong> no consultório para garantir uma experiência sem estresse e sem dor.
+                    </p>
+                    <a href="extracoes.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-bolt text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tratamento a Laser</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Utilizamos tecnologia a laser para o tratamento de feridas, aftas e lesões bucais, acelerando a cicatrização de forma rápida e eficiente.
+                    </p>
+                    <a href="laser.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-cyan-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-teeth-open text-2xl text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Próteses Parcial e Completa</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Restaure a função mastigatória e a estética do seu sorriso com próteses parciais e completas feitas sob medida, garantindo conforto e naturalidade.
+                    </p>
+                    <a href="proteses.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="service-card p-8 reveal flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-50 to-rose-100 flex items-center justify-center mb-6 shadow-sm">
+                        <i class="fa-solid fa-spa text-2xl text-rose-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Procedimentos Estéticos</h3>
+                    <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
+                        Realçamos   sua beleza natural com procedimentos seguros e harmoniosos, incluindo aplicação de <strong>botox, preenchimento labial e suavização de pés de galinha</strong>.
+                    </p>
+                    <a href="estetica.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
+                        Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avaliacoes" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="font-medium text-gray-700">Avaliações do Google</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight"><br/></h2>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-4 bg-gray-50 px-6 py-4 rounded-2xl border border-gray-100">
+                    <div class="text-4xl font-bold text-gray-900"></div>
+                    <div>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1"></p>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-ecc6bb5c-b18c-446c-9071-b2d0623e306d" data-elfsight-app-lazy></div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-900/20 blur-3xl rounded-full transform translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Pronto para cuidar <br/>do sorriso de quem você ama?</h2>
+                    <p class="text-gray-400 font-light mb-10 text-lg">
+                        Agende uma avaliação para você ou para sua família. Nossa equipe entrará em contato rapidamente para encontrar o melhor horário.
+                    </p>
+
+                    <div class="space-y-6">
+                        <a href="https://www.google.com/maps/place/Consult%C3%B3rio+Dentista+Emilly+Ebersol/@-32.0113442,-52.0451977,17z/data=!3m1!4b1!4m6!3m5!1s0x95119d6a069ad909:0x90a5204ff2014f38!8m2!3d-32.0113488!4d-52.0405843!16s%2Fg%2F11xvz1vhhg?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex items-start group cursor-pointer">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center mr-4 flex-shrink-0 transition-colors group-hover:bg-gray-700">
+                                <i class="fa-solid fa-location-dot text-brand-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1 transition-colors group-hover:text-brand-400">Nossa Clínica</h4>
+                                <p class="text-gray-400 text-sm font-light">São José do Norte, RS<br/>Rua Carlos Bulamarque, 319. Sala 04.</p>
+                            </div>
+                        </a>
+                        <div class="flex items-start">
+                            <a href="https://wa.me/5553999573261?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" class="flex items-start group cursor-pointer">
+                                <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center mr-4 flex-shrink-0 transition-colors group-hover:bg-gray-700">
+                                    <i class="fa-brands fa-whatsapp text-brand-500 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-medium mb-1 transition-colors group-hover:text-brand-400">WhatsApp</h4>
+                                    <p class="text-gray-400 text-sm font-light">(53) 99957-3261</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800/50 p-8 rounded-3xl border border-gray-700 reveal backdrop-blur-sm">
+                    <form id="form-agendamento" onsubmit="enviarFormularioWhatsApp(event)">
+                        <div class="mb-6">
+                            <label for="assunto" class="block text-sm font-medium text-gray-300 mb-2">Qual o motivo da consulta?</label>
+                            <select id="assunto" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all appearance-none cursor-pointer">
+                                <option value="Alinhadores Invisíveis">Quero saber sobre Alinhadores Invisíveis</option>
+                                <option value="Aparelho Ortodôntico ou Ortopédico">Aparelho Ortodôntico (Fixo/Móvel) ou Ortopédico</option>
+                                <option value="Consulta infantil">Consulta infantil (Odontopediatria)</option>
+                                <option value="Avaliação Geral">Avaliação Geral</option>
+                                <option value="Limpeza">Limpeza / Prevenção</option>
+                                <option value="Tratamento de Canal">Tratamento de Canal (Endodontia)</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-500 text-white font-semibold py-4 rounded-xl hover:bg-brand-600 transition-colors mt-2 flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Agendar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <i class="fa-solid fa-tooth text-brand-500 text-xl"></i>
+                <span class="font-bold text-lg tracking-tight text-white">Emilly<span class="text-gray-400 font-normal">Ebersol</span></span>
+            </div>
+            
+            <div class="flex space-x-6 mb-4 md:mb-0">
+                <a href="https://www.instagram.com/dentistaemilly/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <a href="https://www.facebook.com/p/Dentista-Emilly-Ebersol-61564626986382/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors">
+                    <i class="fa-brands fa-facebook text-xl"></i>
+                </a>
+            </div>
+
+            <p class="text-gray-600 text-sm font-light text-center md:text-left">
+                © 2026 Emilly Ebersol. Todos os direitos reservados.<br/>
+                <span class="text-xs">CRO-RS 030375 | Resp. Técnica: Emilly Ebersol</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica de abertura e fechamento do Menu Mobile
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar o menu mobile ao clicar em qualquer link interno
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Efeito Glassmorphism: Torna a navbar opaca e com sombra ao rolar a página para baixo
+        const header = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+                header.classList.replace('bg-white/80', 'bg-white/95');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+
+        // Intersection Observer: Dispara a animação (fade-up) dos elementos ao entrarem na tela
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active'); // Adiciona classe que tira opacidade e sobe o card
+                    observer.unobserve(entry.target);     // Para a animação ocorrer apenas uma vez
+                }
+            });
+        };
+
+        const revealOptions = {
+            threshold: 0.15, // Dispara quando 15% do elemento estiver visível
+            rootMargin: "0px 0px -50px 0px" // Pequena margem de segurança
+        };
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Variável contendo o número oficial do WhatsApp da clínica
+        const telefoneWhatsApp = "5553999573261";
+
+        // Função universal para gerar links automáticos do WhatsApp dependendo do botão clicado
+        function agendarWhatsApp(motivo = '') {
+            let texto = "Olá! Gostaria de agendar uma avaliação na clínica.";
+            if (motivo) {
+                texto = `Olá! Gostaria de agendar uma consulta para: *${motivo}*.´ Pode me ajudar com os horários disponíveis?`;
+            }
+            
+            // Abre a API do WhatsApp web/mobile em uma nova aba
+            const url = `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        }
+
+        // Interceptador do formulário da seção 'Contato' para pegar o valor do select e jogar no WhatsApp
+        function enviarFormularioWhatsApp(event) {
+            event.preventDefault(); // Evita o recarregamento padrão do formulário HTML
+            const assuntoSelecionado = document.getElementById('assunto').value;
+            agendarWhatsApp(assuntoSelecionado);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurações e Facetas | Dra. Emilly Ebersol</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            50: '#faf7f2', 100: '#eee3d1', 500: '#c2a373', 600: '#a38454', 900: '#473924',
+                        }
+                    },
+                    animation: { 'float': 'float 6s ease-in-out infinite' },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        .btn-apple { background-color: #1d1d1f; color: white; border-radius: 980px; padding: 12px 24px; font-weight: 500; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; }
+        .btn-apple:hover { background-color: #424245; transform: scale(1.05); }
+    </style>
+</head>
+<body class="text-gray-800 font-sans bg-[#f7f3ec] selection:bg-brand-100 selection:text-brand-900">
+
+    <header class="fixed w-full top-0 z-50 glass-header transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/30 transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-arrow-left text-lg"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Voltar ao <span class="text-brand-600 font-normal">Início</span></span>
+                </a>
+                <div class="hidden md:block">
+                    <button onclick="agendarWhatsApp('Restaurações e Facetas')" class="btn-apple text-sm">Agendar Avaliação</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-brand-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-100 rounded-full blur-3xl opacity-60 -mr-20 -mt-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-medium text-sm mb-6 shadow-sm border border-orange-200">
+                        <i class="fa-solid fa-tooth"></i> Estética e Função
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+                        Devolva a forma e a saúde aos seus <span class="text-brand-600">dentes.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 font-light leading-relaxed">
+                        Seja para remover uma cárie ou para corrigir imperfeições no formato do dente com facetas, nosso objetivo é manter seu sorriso bonito, funcional e extremamente natural.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="agendarWhatsApp('Restaurações ou Facetas')" class="btn-apple text-base px-8 py-4 shadow-lg shadow-gray-900/20 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Agendar avaliação
+                        </button>
+                    </div>
+                </div>
+                <div class="relative mt-8 lg:mt-0">
+                    <div class="absolute inset-0 bg-brand-500 rounded-[2.5rem] transform translate-x-4 translate-y-4 opacity-20"></div>
+                    <img src="imagens/Restauração.jpeg" alt="Sorriso estético" class="rounded-[2.5rem] shadow-2xl object-cover w-full h-[400px] lg:h-[500px] relative z-10">
+                    <div class="absolute -bottom-6 -left-6 lg:-lef  t-12 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100 z-20 animate-float">
+                        <div class="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-orange-500">
+                            <i class="fa-solid fa-star text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Acabamento</p>
+                            <p class="font-bold text-gray-900 text-sm">Alta Estética</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <img src="imagens/Restauração 1.jpeg" alt="Dentista realizando restauração" class="rounded-3xl shadow-lg w-auto h-[400px] object-cover">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Arte e Ciência no seu sorriso</h2>
+                    <p class="text-gray-600 mb-6 font-light">
+                        Esqueça as antigas restaurações metálicas e escuras (amálgama). Hoje, utilizamos resinas compostas de alta tecnologia que imitam perfeitamente a textura, o brilho e a cor do seu dente natural.
+                    </p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 mt-8">Prevenção e Tratamento:</h3>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 mt-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand-500 mt-1 mr-3"></i> 
+                                <span class="text-sm text-gray-700"><strong>Remoção de Cárie Segura:</strong> Limpeza do dente afetado preservando ao máximo a estrutura saudável.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand-500 mt-1 mr-3"></i> 
+                                <span class="text-sm text-gray-700"><strong>Troca de Restaurações:</strong> Substituição de restauração antiga (amálgama) por resina.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-brand-500 mt-1 mr-3"></i> 
+                                <span class="text-sm text-gray-700"><strong>Facetas em Resina:</strong> Correção de dentes manchados, lascados ou com pequenos espaços, esculpidos diretamente no dente.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-24">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl font-bold text-gray-900">Nossos Resultados</h3>
+                    <p class="text-gray-500 mt-2 font-light">Veja a transformação e a naturalidade dos nossos tratamentos.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/restauração2.jpeg" alt="Detalhe 1" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/restauração3.jpeg" alt="Detalhe 2" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/restauração4.jpeg" alt="Detalhe 3" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-sm group">
+                        <img src="imagens/restauração5.jpeg" alt="Detalhe 4" class="w-full h-48 lg:h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-8 text-center">
+        <p class="text-gray-400 text-sm font-light">© 2026 Dra. Emilly Ebersol. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+                header.classList.replace('bg-[#f7f3ec]/80', 'bg-[#f7f3ec]/95');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+        function agendarWhatsApp(motivo = '') {
+            let texto = `Olá! Gostaria de agendar uma avaliação para falar sobre *${motivo}*.`;
+            window.open(`https://wa.me/5553999573261?text=${encodeURIComponent(texto)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
