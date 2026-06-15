@@ -9,9 +9,9 @@
     <meta name="keywords" content="dentista são jose do norte, dra emilly ebersol, odontopediatria são jose do norte, aparelho invisível são jose do norte, dentista familia">
     
     <meta property="og:title" content="Dra. Emilly Ebersol | Odontologia para Toda a Família">
-    <meta property="og:description" content="Sorrisos saudáveis para toda a sua família com atendimento humanizado em Rio Grande.">
+    <meta property="og:description" content="Sorrisos saudáveis para toda a sua família com atendimento humanizado em Rio Grande e São José do Norte.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.draemillyebersol.com.br">
+    <meta property="og:url" content="https://www.dentistaemilly.com.br">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23c2a373' d='M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zM358.5 284.1c-13.6 20.9-38.3 33.1-64.4 33.1H218c-26.1 0-50.8-12.2-64.4-33.1-4.7-7.2-2.7-16.9 4.5-21.6 7.2-4.7 16.9-2.7 21.6 4.5 9 13.9 25.4 22.1 42.8 22.1h71.1c17.4 0 33.8-8.2 42.8-22.1 4.7-7.2 14.4-9.2 21.6-4.5 7.1 4.7 9.2 14.4 4.5 21.6z'/></svg>">
 
@@ -28,10 +28,10 @@
                     },
                     colors: {
                         brand: {
-                            50: '#faf7f2',  // Champagne/Bege muito suave
-                            100: '#eee3d1', // Nude claro
-                            500: '#c2a373', // Dourado/Nude elegante (Cor Principal)
-                            600: '#a38454', // Dourado escuro (Hover e destaques)
+                            50: '#faf7f2',  // Fundo bege principal do site
+                            100: '#eee3d1', // Nude claro (Hover de backgrounds)
+                            500: '#c2a373', // Dourado escuro (Cor principal da clínica)
+                            600: '#a38454', // Dourado mais escuro (Textos e Hovers intensos)
                             900: '#473924', // Marrom acinzentado escuro para contrastes
                         }
                     },
@@ -55,13 +55,14 @@
     </script>
 
     <style>
+        /* Antialiasing para deixar a renderização das fontes mais nítida e premium */
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background-color: #fff5e9a9;
         }
 
-        /* Classes base para a animação de scroll (Intersection Observer) */
+        /* Lógica visual do Intersection Observer (Scroll Reveal) */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -72,7 +73,7 @@
             transform: translateY(0);
         }
 
-        /* Efeito de vidro para a barra de navegação superior */
+        /* Glassmorphism: Efeito de vidro fosco para a Header */
         .glass-header {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -80,7 +81,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* Estilo dos cards de serviço na grade de tratamentos */
+        /* Animações e sombras dos Cartões de Serviço */
         .service-card {
             background: white;
             border-radius: 24px;
@@ -92,7 +93,7 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        /* Estilo base para botões principais arredondados */
+        /* Estilo base global para botões escuros (Estética Apple) */
         .btn-apple {
             background-color: #1d1d1f;
             color: white;
@@ -109,11 +110,12 @@
             transform: scale(1.05);
         }
 
-        /* Utilitários para esconder barras de rolagem nativas, mantendo o scroll ativo */
+        /* Utilitários para ocultar a barra de rolagem (Scrollbar nativa) sem perder a funcionalidade */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
+
 <body class="text-gray-800 font-sans selection:bg-brand-100 selection:text-brand-900">
 
     <header class="fixed w-full top-0 z-50 glass-header transition-all duration-300" id="navbar">
@@ -188,7 +190,7 @@
 
             <div class="mt-20 relative mx-auto w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl animate-fade-in-up" style="animation-delay: 0.3s;">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
-                <img src="./imagens/Capa.jpeg"  class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000">
+                <img src="./imagens/Capa.jpeg" alt="Fachada ou capa da clínica" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000">
             </div>
         </div>
     </section>
@@ -394,7 +396,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Procedimentos Estéticos</h3>
                     <p class="text-gray-600 font-light text-sm mb-6 flex-grow">
-                        Realçamos   sua beleza natural com procedimentos seguros e harmoniosos, incluindo aplicação de <strong>botox, preenchimento labial e suavização de pés de galinha</strong>.
+                        Realçamos sua beleza natural com procedimentos seguros e harmoniosos, incluindo aplicação de <strong>botox, preenchimento labial e suavização de pés de galinha</strong>.
                     </p>
                     <a href="estetica.html" class="text-brand-600 font-medium text-sm hover:text-brand-800 transition-colors flex items-center gap-1 group">
                         Saiba mais <i class="fa-solid fa-chevron-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
@@ -404,28 +406,41 @@
         </div>
     </section>
 
-    <section id="avaliacoes" class="py-24 bg-white overflow-hidden">
+    <section id="avaliacoes" class="py-24 bg-[#f7f3ec] overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
-                <div class="max-w-2xl">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="font-medium text-gray-700">Avaliações do Google</span>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight"><br/></h2>
-                </div>
-                <div class="mt-6 md:mt-0 flex items-center gap-4 bg-gray-50 px-6 py-4 rounded-2xl border border-gray-100">
-                    <div class="text-4xl font-bold text-gray-900"></div>
-                    <div>
-                        <div class="flex text-yellow-400 text-sm">
-                            <i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">O que dizem nossos pacientes</h2>
+            </div>
+
+            <div id="bloco-elfsight" class="block">
+                <div class="elfsight-app-ecc6bb5c-b18c-446c-9071-b2d0623e306d" data-elfsight-app-lazy></div>
+            </div>
+
+            <div id="bloco-google" class="hidden">
+                <div class="bg-[#fafafa] rounded-2xl p-6 mb-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 border border-gray-100 max-w-4xl mx-auto shadow-sm">
+                    <div class="flex items-center gap-2 md:gap-3">
+                        <div class="font-bold text-2xl md:text-3xl tracking-tighter flex items-center select-none">
+                            <span class="text-[#4285F4]">G</span><span class="text-[#EA4335]">o</span><span class="text-[#FBBC05]">o</span><span class="text-[#4285F4]">g</span><span class="text-[#34A853]">l</span><span class="text-[#EA4335]">e</span>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1"></p>
+                        <span class="text-2xl md:text-3xl font-bold text-gray-900 ml-1 md:ml-2">5.0</span>
+                        <div class="flex text-[#fbbc04] text-lg md:text-xl gap-0.5 ml-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <a href="https://search.google.com/local/writereview?placeid=ChIJCdmaBmqdEZUROE8B8k8gpZA" target="_blank" rel="noopener noreferrer" class="bg-[#b35e12] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-[#8f4b0e] transition-colors shadow-sm whitespace-nowrap">
+                        Escreva uma avaliação
+                    </a>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <div id="google-reviews" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar items-stretch">
+                        <div class="w-full text-center text-gray-500 py-10" id="loading-reviews">
+                            <i class="fa-solid fa-circle-notch fa-spin text-3xl text-[#b35e12] mb-3"></i>
+                            <p class="font-light">Buscando as melhores avaliações...</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <script src="https://elfsightcdn.com/platform.js" async></script>
-            <div class="elfsight-app-ecc6bb5c-b18c-446c-9071-b2d0623e306d" data-elfsight-app-lazy></div>
         </div>
     </section>
 
@@ -434,6 +449,7 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
                 <div class="reveal">
                     <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Pronto para cuidar <br/>do sorriso de quem você ama?</h2>
                     <p class="text-gray-400 font-light mb-10 text-lg">
@@ -450,6 +466,7 @@
                                 <p class="text-gray-400 text-sm font-light">São José do Norte, RS<br/>Rua Carlos Bulamarque, 319. Sala 04.</p>
                             </div>
                         </a>
+                        
                         <div class="flex items-start">
                             <a href="https://wa.me/5553999573261?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" class="flex items-start group cursor-pointer">
                                 <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center mr-4 flex-shrink-0 transition-colors group-hover:bg-gray-700">
@@ -510,8 +527,17 @@
         </div>
     </footer>
 
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmsLsEw-OFzSAJDJDCgBRAdX6ecwoTXyI&libraries=places"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
     <script>
-        // Lógica de abertura e fechamento do Menu Mobile
+        /* ---------------------------------------------------------
+           1. CONTROLE DE INTERFACE DE USUÁRIO (UI)
+        --------------------------------------------------------- */
+        
+        // --- MENU MOBILE ---
+        // Alterna a visibilidade do menu "hamburguer" no celular
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
 
@@ -519,7 +545,7 @@
             menu.classList.toggle('hidden');
         });
 
-        // Fechar o menu mobile ao clicar em qualquer link interno
+        // Oculta o menu automaticamente ao clicar em qualquer link interno
         const mobileLinks = menu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -527,7 +553,9 @@
             });
         });
 
-        // Efeito Glassmorphism: Torna a navbar opaca e com sombra ao rolar a página para baixo
+        // --- EFEITO GLASSMORPHISM NO HEADER ---
+        // Adiciona sombra e fundo fosco à Navbar apenas quando o usuário faz scroll.
+        // No topo, a barra se mantém leve e transparente.
         const header = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
@@ -538,47 +566,152 @@
             }
         });
 
-        // Intersection Observer: Dispara a animação (fade-up) dos elementos ao entrarem na tela
+        // --- INTERSECTION OBSERVER (Animações de Entrada) ---
+        // Padrão de mercado para Lazy Load visual. 
+        // Observa os elementos com a classe '.reveal'. Quando 15% deles entrarem na tela,
+        // adicionamos a classe '.active' para acionar o CSS de fade-in de baixo para cima.
         const revealElements = document.querySelectorAll('.reveal');
         const revealCallback = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active'); // Adiciona classe que tira opacidade e sobe o card
-                    observer.unobserve(entry.target);     // Para a animação ocorrer apenas uma vez
+                    entry.target.classList.add('active'); 
+                    observer.unobserve(entry.target); // Desliga a observação após animar uma vez
                 }
             });
         };
 
         const revealOptions = {
-            threshold: 0.15, // Dispara quando 15% do elemento estiver visível
-            rootMargin: "0px 0px -50px 0px" // Pequena margem de segurança
+            threshold: 0.15, 
+            rootMargin: "0px 0px -50px 0px"
         };
         const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
 
-        revealElements.forEach(el => {
-            revealObserver.observe(el);
-        });
+        revealElements.forEach(el => revealObserver.observe(el));
 
-        // Variável contendo o número oficial do WhatsApp da clínica
+
+        /* ---------------------------------------------------------
+           2. ROTEAMENTO DE WHATSAPP
+        --------------------------------------------------------- */
         const telefoneWhatsApp = "5553999573261";
 
-        // Função universal para gerar links automáticos do WhatsApp dependendo do botão clicado
+        // Gera URLs dinâmicas para a API do WhatsApp.
+        // Se um motivo for passado (via formulário), formata uma mensagem específica.
         function agendarWhatsApp(motivo = '') {
             let texto = "Olá! Gostaria de agendar uma avaliação na clínica.";
             if (motivo) {
                 texto = `Olá! Gostaria de agendar uma avaliação para: *${motivo}*. Pode me ajudar com os horários disponíveis?`;
             }
             
-            // Abre a API do WhatsApp web/mobile em uma nova aba
             const url = `https://wa.me/${telefoneWhatsApp}?text=${encodeURIComponent(texto)}`;
             window.open(url, '_blank');
         }
 
-        // Interceptador do formulário da seção 'Contato' para pegar o valor do select e jogar no WhatsApp
+        // Intercepta o comportamento padrão do `<form>` para não recarregar a página,
+        // capturando o valor do Select e passando para a função agendarWhatsApp().
         function enviarFormularioWhatsApp(event) {
-            event.preventDefault(); // Evita o recarregamento padrão do formulário HTML
+            event.preventDefault(); 
             const assuntoSelecionado = document.getElementById('assunto').value;
             agendarWhatsApp(assuntoSelecionado);
+        }
+
+
+        /* ---------------------------------------------------------
+           3. FALLBACK DE AVALIAÇÕES (FEATURE FLAG)
+        --------------------------------------------------------- */
+        
+        // FEATURE FLAG (Chave Mestra):
+        // true  = Exibe o widget Elfsight.
+        // false = Exibe a API nativa do Google.
+        // Mudar para 'false' assim que as views do mês do Elfsight esgotarem.
+        const usarElfsight = false; 
+
+        window.addEventListener('load', () => {
+            const blocoElfsight = document.getElementById('bloco-elfsight');
+            const blocoGoogle = document.getElementById('bloco-google');
+
+            if (usarElfsight) {
+                blocoElfsight.classList.remove('hidden');
+                blocoGoogle.classList.add('hidden');
+            } else {
+                blocoElfsight.classList.add('hidden');
+                blocoGoogle.classList.remove('hidden');
+                carregarAvaliacoesGoogleAPI(); // Só executa a requisição se realmente precisar
+            }
+        });
+
+        // Função de consulta assíncrona ao banco de dados do Google Places.
+        function carregarAvaliacoesGoogleAPI() {
+            // O serviço do Google exige um elemento HTML 'dummy' (oculto) como contexto.
+            const divOculta = document.createElement('div');
+            const service = new google.maps.places.PlacesService(divOculta);
+
+            // Requisição apenas pelo campo 'reviews' para economizar bytes e melhorar a performance.
+            const request = {
+                placeId: 'ChIJCdmaBmqdEZUROE8B8k8gpZA', 
+                fields: ['reviews']
+            };
+
+            // Efetua a chamada à API e lida com o Callback (Resposta)
+            service.getDetails(request, (place, status) => {
+                const container = document.getElementById('google-reviews');
+                const loading = document.getElementById('loading-reviews');
+
+                if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
+                    loading.style.display = 'none'; // Oculta o ícone de carregamento (Spinner)
+                    
+                    place.reviews.forEach(review => {
+                        // Filtro de Qualidade: Apenas notas altas e depoimentos com texto
+                        if (review.rating >= 4 && review.text) {
+                            
+                            // Criação dinâmica dos Nodes (Cartões) via Template Literals
+                            const cardHTML = `
+                                <div class="bg-[#fafafa] p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col flex-shrink-0 w-[320px] md:w-[350px] snap-center">
+                                    <div class="flex items-center gap-3 mb-4">
+                                        <div class="relative">
+                                            <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-11 h-11 rounded-full shadow-sm object-cover" referrerpolicy="no-referrer">
+                                            <div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] shadow-sm flex items-center justify-center">
+                                                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <div class="flex items-center gap-1">
+                                                <h4 class="font-bold text-gray-900 text-sm tracking-tight line-clamp-1">${review.author_name}</h4>
+                                                <i class="fa-solid fa-circle-check text-[#b35e12] text-[10px]"></i>
+                                            </div>
+                                            <span class="text-[11px] text-gray-400 font-medium mt-0.5">Postado no Google</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-[#fbbc04] text-[13px] mb-2 gap-0.5">
+                                        ${gerarEstrelas(review.rating)}
+                                    </div>
+                                    <p class="text-gray-800 text-sm leading-relaxed flex-grow line-clamp-4 mb-1">
+                                        ${review.text}
+                                    </p>
+                                </div>
+                            `;
+                            // Injeta o cartão no fim da Div-pai
+                            container.insertAdjacentHTML('beforeend', cardHTML);
+                        }
+                    });
+                } else {
+                    // Tratamento de erro elegante para o usuário (Falhas de Rede ou API Bloqueada)
+                    loading.innerHTML = '<p class="text-red-500 font-light">Não foi possível carregar as avaliações no momento.</p>';
+                }
+            });
+        }
+
+        // Função utilitária (Helper) para imprimir a quantidade correta de ícones FontAwesome
+        function gerarEstrelas(nota) {
+            let estrelas = '';
+            for (let i = 0; i < nota; i++) {
+                estrelas += '<i class="fa-solid fa-star"></i>';
+            }
+            return estrelas;
         }
     </script>
 </body>
